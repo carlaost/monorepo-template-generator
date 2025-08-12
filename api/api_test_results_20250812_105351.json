@@ -1,0 +1,438 @@
+{
+  "timestamp": "2025-08-12T10:53:51.697818",
+  "base_url": "http://localhost:8000",
+  "results": {
+    "endpoints": [
+      {
+        "status": "SUCCESS",
+        "status_code": 200,
+        "response_time": 2.39,
+        "response_data": {
+          "message": "Welcome to Oshima API",
+          "version": "0.1.0",
+          "description": "FastAPI backend for Oshima ecosystem",
+          "docs_url": null,
+          "redoc_url": null
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "139",
+          "content-type": "application/json"
+        },
+        "endpoint": "/",
+        "method": "GET",
+        "name": "root",
+        "tags": []
+      },
+      {
+        "status": "SUCCESS",
+        "status_code": 200,
+        "response_time": 1.83,
+        "response_data": {
+          "status": "healthy",
+          "timestamp": "2025-08-12T08:53:51.647045",
+          "version": "0.1.0",
+          "environment": "production"
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "106",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/health/",
+        "method": "GET",
+        "name": "health_check",
+        "tags": [
+          "health"
+        ]
+      },
+      {
+        "status": "SUCCESS",
+        "status_code": 200,
+        "response_time": 1.17,
+        "response_data": {
+          "status": "healthy",
+          "timestamp": "2025-08-12T08:53:51.649169",
+          "version": "0.1.0",
+          "environment": "production",
+          "app_name": "Oshima API",
+          "debug": false,
+          "checks": {
+            "api": "healthy"
+          }
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "171",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/health/detailed",
+        "method": "GET",
+        "name": "detailed_health_check",
+        "tags": [
+          "health"
+        ]
+      },
+      {
+        "status": "SUCCESS",
+        "status_code": 200,
+        "response_time": 2.47,
+        "response_data": [
+          {
+            "title": "Sample Item 1",
+            "description": "This is a sample item for demonstration",
+            "is_active": true,
+            "id": 1,
+            "owner_id": 1,
+            "created_at": "2025-08-12T08:53:31.822535",
+            "updated_at": "2025-08-12T08:53:31.822685"
+          },
+          {
+            "title": "Sample Item 2",
+            "description": "Another sample item",
+            "is_active": true,
+            "id": 2,
+            "owner_id": 2,
+            "created_at": "2025-08-12T08:53:31.822686",
+            "updated_at": "2025-08-12T08:53:31.822686"
+          }
+        ],
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "387",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/items/",
+        "method": "GET",
+        "name": "list_items",
+        "tags": [
+          "items"
+        ]
+      },
+      {
+        "status": "ERROR",
+        "status_code": 422,
+        "response_time": 1.94,
+        "response_data": {
+          "detail": [
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "title"
+              ],
+              "msg": "Field required",
+              "input": {}
+            }
+          ]
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "88",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/items/",
+        "method": "POST",
+        "name": "create_item",
+        "tags": [
+          "items"
+        ]
+      },
+      {
+        "status": "ERROR",
+        "status_code": 422,
+        "response_time": 1.19,
+        "response_data": {
+          "detail": [
+            {
+              "type": "int_parsing",
+              "loc": [
+                "path",
+                "item_id"
+              ],
+              "msg": "Input should be a valid integer, unable to parse string as an integer",
+              "input": "{item_id}"
+            }
+          ]
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "158",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/items/{item_id}",
+        "method": "GET",
+        "name": "get_item",
+        "tags": [
+          "items"
+        ]
+      },
+      {
+        "status": "ERROR",
+        "status_code": 422,
+        "response_time": 1.73,
+        "response_data": {
+          "detail": [
+            {
+              "type": "int_parsing",
+              "loc": [
+                "path",
+                "item_id"
+              ],
+              "msg": "Input should be a valid integer, unable to parse string as an integer",
+              "input": "{item_id}"
+            }
+          ]
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "158",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/items/{item_id}",
+        "method": "PUT",
+        "name": "update_item",
+        "tags": [
+          "items"
+        ]
+      },
+      {
+        "status": "ERROR",
+        "status_code": 422,
+        "response_time": 1.26,
+        "response_data": {
+          "detail": [
+            {
+              "type": "int_parsing",
+              "loc": [
+                "path",
+                "item_id"
+              ],
+              "msg": "Input should be a valid integer, unable to parse string as an integer",
+              "input": "{item_id}"
+            }
+          ]
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "158",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/items/{item_id}",
+        "method": "DELETE",
+        "name": "delete_item",
+        "tags": [
+          "items"
+        ]
+      },
+      {
+        "status": "SUCCESS",
+        "status_code": 200,
+        "response_time": 27.44,
+        "response_data": [
+          {
+            "email": "alice@example.com",
+            "name": "Alice Johnson",
+            "is_active": true,
+            "id": 1,
+            "created_at": "2025-08-12T08:53:31.823693",
+            "updated_at": "2025-08-12T08:53:31.823694"
+          },
+          {
+            "email": "bob@example.com",
+            "name": "Bob Smith",
+            "is_active": true,
+            "id": 2,
+            "created_at": "2025-08-12T08:53:31.823695",
+            "updated_at": "2025-08-12T08:53:31.823695"
+          }
+        ],
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "317",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/users/",
+        "method": "GET",
+        "name": "list_users",
+        "tags": [
+          "users"
+        ]
+      },
+      {
+        "status": "ERROR",
+        "status_code": 422,
+        "response_time": 1.68,
+        "response_data": {
+          "detail": [
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "email"
+              ],
+              "msg": "Field required",
+              "input": {}
+            },
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "name"
+              ],
+              "msg": "Field required",
+              "input": {}
+            },
+            {
+              "type": "missing",
+              "loc": [
+                "body",
+                "password"
+              ],
+              "msg": "Field required",
+              "input": {}
+            }
+          ]
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "242",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/users/",
+        "method": "POST",
+        "name": "create_user",
+        "tags": [
+          "users"
+        ]
+      },
+      {
+        "status": "ERROR",
+        "status_code": 422,
+        "response_time": 0.86,
+        "response_data": {
+          "detail": [
+            {
+              "type": "int_parsing",
+              "loc": [
+                "path",
+                "user_id"
+              ],
+              "msg": "Input should be a valid integer, unable to parse string as an integer",
+              "input": "{user_id}"
+            }
+          ]
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "158",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/users/{user_id}",
+        "method": "GET",
+        "name": "get_user",
+        "tags": [
+          "users"
+        ]
+      },
+      {
+        "status": "ERROR",
+        "status_code": 422,
+        "response_time": 1.66,
+        "response_data": {
+          "detail": [
+            {
+              "type": "int_parsing",
+              "loc": [
+                "path",
+                "user_id"
+              ],
+              "msg": "Input should be a valid integer, unable to parse string as an integer",
+              "input": "{user_id}"
+            }
+          ]
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "158",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/users/{user_id}",
+        "method": "PUT",
+        "name": "update_user",
+        "tags": [
+          "users"
+        ]
+      },
+      {
+        "status": "ERROR",
+        "status_code": 422,
+        "response_time": 0.9,
+        "response_data": {
+          "detail": [
+            {
+              "type": "int_parsing",
+              "loc": [
+                "path",
+                "user_id"
+              ],
+              "msg": "Input should be a valid integer, unable to parse string as an integer",
+              "input": "{user_id}"
+            }
+          ]
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "158",
+          "content-type": "application/json"
+        },
+        "endpoint": "/api/v1/users/{user_id}",
+        "method": "DELETE",
+        "name": "delete_user",
+        "tags": [
+          "users"
+        ]
+      },
+      {
+        "status": "SUCCESS",
+        "status_code": 200,
+        "response_time": 0.92,
+        "response_data": {
+          "status": "healthy",
+          "version": "0.1.0",
+          "environment": "production"
+        },
+        "headers": {
+          "date": "Tue, 12 Aug 2025 08:53:51 GMT",
+          "server": "uvicorn",
+          "content-length": "65",
+          "content-type": "application/json"
+        },
+        "endpoint": "/health",
+        "method": "GET",
+        "name": "health_check",
+        "tags": []
+      }
+    ],
+    "summary": {
+      "total": 14,
+      "success": 6,
+      "error": 8,
+      "failed": 0,
+      "skipped": 0
+    }
+  }
+}

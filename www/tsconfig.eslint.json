@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.astro",
+    "astro.config.mjs",
+    "tailwind.config.cjs",
+    "vite.config.*"
+  ]
+}

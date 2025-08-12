@@ -1,0 +1,16 @@
+---
+import { ThemeToggle, Button } from "@oshi/ui";
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<ThemeToggle client:load />
+	<Button client:load>Hi</Button>
+	<div class="flex gap-2 mt-4">
+	<div class="h-6 w-6 rounded bg-mauve-3"></div>
+	<div class="h-6 w-6 rounded bg-mauve-6"></div>
+	<div class="h-6 w-6 rounded bg-mauve-9"></div>
+	<div class="h-6 w-6 rounded bg-mauve-12"></div>
+	</div>
+
+</Layout>
