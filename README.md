@@ -1,94 +1,154 @@
-# Monorepo Template Generator 🚀
+# Full-Stack Monorepo Template Generator 🚀
 
-A single-file script that generates a complete modern monorepo with React, Astro, and shared components.
+A complete template generator that creates a professional full-stack monorepo with React, Astro, FastAPI, and comprehensive development tooling.
 
 ## 🎯 What it creates
 
-- **React 18 + Vite** application (`/app`)
-- **Astro 5** static site (`/www`) 
-- **Shared component library** (`/packages/components`)
-- **ESLint + TypeScript** configuration
-- **Tailwind CSS** with Radix colors
-- **Husky hooks** for code quality
-- **npm workspaces** setup
+- **React 18 + Vite** application (`/app`) with TypeScript
+- **Astro 5** static site (`/www`) with TypeScript  
+- **FastAPI** backend (`/api`) with Python 3.13 and uv
+- **Shared UI components** (`/packages`) with Tailwind CSS
+- **Professional development tooling** and workflows
+
+## ✨ Features
+
+- ⚛️ **React 18** with Vite and TypeScript
+- 🚀 **Astro 5** for static sites and marketing
+- 🔥 **FastAPI** with Python 3.13 and uv package manager
+- 📦 **Shared components** library (@scope/ui)
+- 🎨 **Tailwind CSS** with Radix colors
+- 🔧 **Professional tooling** (ESLint, Black, flake8, Husky)
+- 🧪 **Automated testing** (API endpoint discovery)
+- 📱 **Mobile-first** responsive design
+- ⚡ **Selective development** (start only needed services)
 
 ## 🚀 Quick Start
 
 ```bash
-# Download the script
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/monorepo-template-generator/main/generate-monorepo.sh
+# Generate a complete full-stack monorepo
+./generate-monorepo-v2.sh my-awesome-project my-scope
 
-# Make it executable
-chmod +x generate-monorepo.sh
+# Generated structure includes:
+# - React 18 + Vite + TypeScript
+# - Astro 5 + TypeScript  
+# - FastAPI + Python 3.13
+# - Shared UI components
+# - Professional dev tooling
+```
+
+This creates a project structure like:
+
+```
+my-awesome-project/
+├── app/                    # React application
+├── www/                    # Astro static site  
+├── api/                    # FastAPI backend
+├── packages/               # Shared components
+├── dev.sh                  # Development script
+└── package.json           # Root configuration
+```
+
+## 🛠️ Generated Development Workflow
+
+The generated monorepo includes a complete professional development setup:
+
+### One-Command Development
+```bash
+cd my-awesome-project
+npm install
+cd api && uv venv && uv pip install -e ".[dev]" && cd ..
+npm run dev  # Starts all services!
+```
+
+### Selective Development
+```bash
+./dev.sh app www    # Frontend only
+./dev.sh api        # Backend only
+./dev.sh app        # React only
+```
+
+### Quality Control
+```bash
+npm run lint:strict        # Frontend linting
+npm run lint:python        # Backend linting  
+npm run typecheck          # TypeScript checking
+npm run test:api           # API endpoint testing
+```
+
+## 📦 Generated Services
+
+- 🅰️ **React App**: http://localhost:5173
+- 🚀 **Astro Site**: http://localhost:4321
+- 🔥 **FastAPI**: http://localhost:8000
+- 📖 **API Docs**: http://localhost:8000/docs
+
+## 🔧 Included Tools
+
+### Frontend
+- **React 18** with TypeScript and Vite
+- **Astro 5** with TypeScript
+- **ESLint** with Airbnb configuration
+- **Tailwind CSS** with Radix colors
+- **Shared component library**
+
+### Backend  
+- **FastAPI** with async/await support
+- **Python 3.13** with uv package manager
+- **Black** code formatting
+- **isort** import organization
+- **flake8** linting
+- **Structured logging** with JSON output
+- **Auto-generated OpenAPI docs**
+
+### Development
+- **Husky** git hooks for quality control
+- **lint-staged** for pre-commit formatting
+- **Selective dev script** for flexible development
+- **Automated API testing** with endpoint discovery
+- **Professional project structure**
+
+## 🚀 Usage
+
+```bash
+# Clone this repository
+git clone https://github.com/carlaost/monorepo-template-generator.git
+cd monorepo-template-generator
 
 # Generate your monorepo
-./generate-monorepo.sh my-awesome-project my-scope
-```
+./generate-monorepo-v2.sh my-project my-scope
 
-## 📋 Usage
-
-```bash
-./generate-monorepo.sh [project-name] [package-scope]
-```
-
-**Parameters:**
-- `project-name` (optional): Name of your project (default: "my-monorepo")
-- `package-scope` (optional): npm scope for shared packages (default: "my")
-
-**Examples:**
-```bash
-# Basic usage
-./generate-monorepo.sh
-
-# Custom project name
-./generate-monorepo.sh awesome-app
-
-# Custom project name and scope
-./generate-monorepo.sh awesome-app awesome
-```
-
-## 🎁 Generated Structure
-
-```
-your-project/
-├── app/                    # React + Vite application
-├── www/                    # Astro static site
-├── packages/
-│   ├── components/         # @your-scope/ui component library
-│   └── config/            # Shared Tailwind config
-├── .husky/                # Git hooks
-├── package.json           # Root workspace config
-└── README.md              # Project documentation
-```
-
-## ⚡ After Generation
-
-```bash
-cd your-project
+# Start developing
+cd my-project
 npm install
-npm run dev --workspaces
+cd api && uv venv && uv pip install -e ".[dev]" && cd ..
+npm run dev
 ```
 
-Your apps will be available at:
-- **React App**: http://localhost:5173
-- **Astro Site**: http://localhost:4321
+## 📋 Generated Scripts
 
-## 🛠️ Features
+The generated monorepo includes these npm scripts:
 
-✅ **Modern Stack**: React 18, Astro 5, TypeScript, Vite  
-✅ **Code Quality**: ESLint (Airbnb), Husky hooks, lint-staged  
-✅ **Styling**: Tailwind CSS with Radix color system  
-✅ **Monorepo**: npm workspaces with shared components  
-✅ **Ready to Use**: Pre-configured build, dev, and lint scripts  
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start all development servers |
+| `./dev.sh [services]` | Start specific services |
+| `npm run lint` | Lint frontend code |
+| `npm run lint:python` | Lint Python code |
+| `npm run test:api` | Test all API endpoints |
+| `npm run typecheck` | TypeScript checking |
 
-## 🤝 Contributing
+## 🎯 Perfect For
 
-Contributions welcome! This is a single-file generator to keep it simple.
+- **Full-stack applications** with React frontend and Python backend
+- **Marketing sites** with Astro and shared components
+- **Professional projects** requiring quality tooling
+- **Team development** with consistent workflows
+- **Rapid prototyping** with production-ready structure
 
 ## 📄 License
 
-MIT - Use freely for your projects!
+MIT License - feel free to use for your projects!
 
 ---
 
-**Perfect for**: Agencies, product teams, or anyone who wants a solid monorepo foundation without the setup hassle.
+**Generate a complete professional monorepo in seconds!** 🚀
